@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d06ddcc-1205-4787-afd3-a057a266555f" name="Default Changelist" comment="Changed CustomerDAO to support MySQL Layout">
+    <list default="true" id="5d06ddcc-1205-4787-afd3-a057a266555f" name="Default Changelist" comment="Updated SQL File">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/IMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/IMS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/dao/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/dao/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql-schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sql-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sql-schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +14,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="feature-docs" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1ljnp7k4bQxteMTXFNAxq5xSmku" />
@@ -80,7 +81,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609758795622</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changed `id` to `CID` to match MySQL Layout">
+      <created>1609759816331</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609759816331</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated SQL File">
+      <created>1609759829546</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609759829547</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -103,6 +118,8 @@
     <MESSAGE value="Removed package-info.java" />
     <MESSAGE value="Optimised Imports + Formatted Code from base" />
     <MESSAGE value="Changed CustomerDAO to support MySQL Layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed CustomerDAO to support MySQL Layout" />
+    <MESSAGE value="Changed `id` to `CID` to match MySQL Layout" />
+    <MESSAGE value="Updated SQL File" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated SQL File" />
   </component>
 </project>

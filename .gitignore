@@ -30,3 +30,4 @@ bin/
 !.gitignore
 *.log
 *.iml
+workspace.xml
