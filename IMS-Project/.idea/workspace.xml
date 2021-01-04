@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d06ddcc-1205-4787-afd3-a057a266555f" name="Default Changelist" comment="Added ItemController">
+    <list default="true" id="5d06ddcc-1205-4787-afd3-a057a266555f" name="Default Changelist" comment="Updated IMS to support Item Classes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/domain/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/IMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/IMS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sql-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sql-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/sql-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sql-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/sql-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sql-schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="dev" />
+        <entry key="$PROJECT_DIR$/.." value="feature-item" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -57,6 +54,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Runner" />
         <item itemvalue="Application.Runner" />
       </list>
     </recent_temporary>
@@ -126,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609762374129</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated IMS to support Item Classes">
+      <created>1609762620322</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609762620322</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -154,6 +159,7 @@
     <MESSAGE value="Added Item class" />
     <MESSAGE value="Added ItemDAO Class + Modified Item Class" />
     <MESSAGE value="Added ItemController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ItemController" />
+    <MESSAGE value="Updated IMS to support Item Classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated IMS to support Item Classes" />
   </component>
 </project>
