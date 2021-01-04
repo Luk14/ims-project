@@ -20,9 +20,9 @@ public class CustomerDAO implements Dao<Customer>
     @Override
     public Customer modelFromResultSet(ResultSet resultSet) throws SQLException
     {
-        Long id = resultSet.getLong("id");
+        Long id = resultSet.getLong("CID");
         String firstName = resultSet.getString("first_name");
-        String surname = resultSet.getString("surname");
+        String surname = resultSet.getString("last_name");
         return new Customer(id, firstName, surname);
     }
 
@@ -79,7 +79,7 @@ public class CustomerDAO implements Dao<Customer>
         try (Connection connection = DBUtils.getInstance().getConnection();
              Statement statement = connection.createStatement();)
         {
-            statement.executeUpdate("INSERT INTO customers(first_name, surname) values('" + customer.getFirstName()
+            statement.executeUpdate("INSERT INTO customers(first_name, last_name) values('" + customer.getFirstName()
                     + "','" + customer.getSurname() + "')");
             return readLatest();
         } catch (Exception e)
@@ -119,7 +119,7 @@ public class CustomerDAO implements Dao<Customer>
         try (Connection connection = DBUtils.getInstance().getConnection();
              Statement statement = connection.createStatement();)
         {
-            statement.executeUpdate("update customers set first_name ='" + customer.getFirstName() + "', surname ='"
+            statement.executeUpdate("update customers set first_name ='" + customer.getFirstName() + "', last_name ='"
                     + customer.getSurname() + "' where id =" + customer.getId());
             return readCustomer(customer.getId());
         } catch (Exception e)
