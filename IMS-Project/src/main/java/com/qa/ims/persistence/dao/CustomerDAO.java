@@ -56,7 +56,7 @@ public class CustomerDAO implements Dao<Customer>
     {
         try (Connection connection = DBUtils.getInstance().getConnection();
              Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery("SELECT * FROM customers ORDER BY id DESC LIMIT 1");)
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM customers ORDER BY CID DESC LIMIT 1");)
         {
             resultSet.next();
             return modelFromResultSet(resultSet);
@@ -94,7 +94,7 @@ public class CustomerDAO implements Dao<Customer>
     {
         try (Connection connection = DBUtils.getInstance().getConnection();
              Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery("SELECT * FROM customers where id = " + id);)
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM customers where CID = " + id);)
         {
             resultSet.next();
             return modelFromResultSet(resultSet);
@@ -120,7 +120,7 @@ public class CustomerDAO implements Dao<Customer>
              Statement statement = connection.createStatement();)
         {
             statement.executeUpdate("update customers set first_name ='" + customer.getFirstName() + "', last_name ='"
-                    + customer.getSurname() + "' where id =" + customer.getId());
+                    + customer.getSurname() + "' where CID =" + customer.getId());
             return readCustomer(customer.getId());
         } catch (Exception e)
         {
@@ -141,7 +141,7 @@ public class CustomerDAO implements Dao<Customer>
         try (Connection connection = DBUtils.getInstance().getConnection();
              Statement statement = connection.createStatement();)
         {
-            return statement.executeUpdate("delete from customers where id = " + id);
+            return statement.executeUpdate("delete from customers where CID = " + id);
         } catch (Exception e)
         {
             LOGGER.debug(e);
