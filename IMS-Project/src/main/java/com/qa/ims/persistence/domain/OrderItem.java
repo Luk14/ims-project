@@ -2,15 +2,17 @@ package com.qa.ims.persistence.domain;
 
 import java.util.Objects;
 
-public class Order
+public class OrderItem
 {
 
     private Long oid, cid;
+    private Long[] iid;
 
-    public Order(Long oid, Long cid)
+    public OrderItem(Long oid, Long cid, Long... iid)
     {
         this.oid = oid;
         this.cid = cid;
+        this.iid = iid;
     }
 
     public Long getOid()
@@ -23,13 +25,23 @@ public class Order
         return cid;
     }
 
+    public Long[] getIid()
+    {
+        return iid;
+    }
+
+    public void setIid(Long[] iid)
+    {
+        this.iid = iid;
+    }
+
     @Override
     public boolean equals(Object o)
     {
         if (this == o) return true;
-        if (!(o instanceof Order)) return false;
-        Order order = (Order) o;
-        return Objects.equals(oid, order.oid) && Objects.equals(cid, order.cid);
+        if (!(o instanceof OrderItem)) return false;
+        OrderItem orderItem = (OrderItem) o;
+        return Objects.equals(oid, orderItem.oid) && Objects.equals(cid, orderItem.cid);
     }
 
     @Override
