@@ -4,23 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d06ddcc-1205-4787-afd3-a057a266555f" name="Default Changelist" comment="Removed package-info.java">
+    <list default="true" id="5d06ddcc-1205-4787-afd3-a057a266555f" name="Default Changelist" comment="Changed CustomerDAO to support MySQL Layout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/IMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/IMS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/controller/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/controller/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/controller/CrudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/controller/CrudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/controller/CustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/dao/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/dao/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/dao/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/domain/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/domain/Domain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/domain/Domain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/utils/DBUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/utils/DBUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/ims/controllers/CustomerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/ims/controllers/CustomerControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/ims/persistence/dao/CustomerDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/ims/persistence/dao/CustomerDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql-schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sql-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sql-schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,11 +66,26 @@
       <option name="project" value="LOCAL" />
       <updated>1609758163898</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Optimised Imports + Formatted Code from base">
+      <created>1609758527464</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609758527464</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Changed CustomerDAO to support MySQL Layout">
+      <created>1609758795622</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609758795622</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sql" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -96,6 +101,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Removed package-info.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed package-info.java" />
+    <MESSAGE value="Optimised Imports + Formatted Code from base" />
+    <MESSAGE value="Changed CustomerDAO to support MySQL Layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed CustomerDAO to support MySQL Layout" />
   </component>
 </project>
