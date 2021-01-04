@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Item
 {
 
-    private int id;
+    private Long id;
     private String name;
     private double version;
     private double price;
@@ -19,7 +19,7 @@ public class Item
         this.description = description;
     }
 
-    public Item(int id, String name, double version, double price, String description)
+    public Item(Long id, String name, double version, double price, String description)
     {
         this.id = id;
         this.name = name;
@@ -28,7 +28,7 @@ public class Item
         this.description = description;
     }
 
-    public int getId()
+    public Long getId()
     {
         return id;
     }
