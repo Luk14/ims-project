@@ -27,11 +27,25 @@ public class IMS
 
     public void imsSystem()
     {
-        LOGGER.info("What is your username");
-        String username = utils.getString();
-        LOGGER.info("What is your password");
-        String password = utils.getString();
-        DBUtils.connect(username, password);
+        for (int i = 1; i <= 3; i++)
+        {
+            LOGGER.info("What is your username");
+            String username = utils.getString();
+            LOGGER.info("What is your password");
+            String password = utils.getString();
+            DBUtils.connect(username, password);
+            if (DBUtils.getInstance().testConnection())
+            {
+                LOGGER.info("Successfully logged to the database!");
+                break;
+            }
+            if (i == 3)
+            {
+                LOGGER.info("Failed to login Several times! Program Terminating");
+                System.exit(-1);
+            }
+            LOGGER.info("Failed to login to Database, please try again! " + (3 - i) + " tries remaining!");
+        }
         Domain domain = null;
         do
         {

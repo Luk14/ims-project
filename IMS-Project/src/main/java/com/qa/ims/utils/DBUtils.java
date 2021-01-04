@@ -78,6 +78,19 @@ public class DBUtils
         return DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
     }
 
+    public boolean testConnection()
+    {
+        try
+        {
+            return getConnection() != null;
+        }
+        catch (SQLException e)
+        {
+            return false;
+        }
+    }
+
+
     public static DBUtils instance;
 
     public static DBUtils connect(String username, String password)
