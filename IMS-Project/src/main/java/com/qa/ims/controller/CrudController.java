@@ -6,14 +6,15 @@ import java.util.List;
  * Create, Read, Update and Delete controller. Takes in inputs for each action
  * to be sent to a service class
  */
-public interface CrudController<T> {
+public interface CrudController<T>
+{
 
-	List<T> readAll();
+    List<T> readAll();
 
-	T create();
+    T create();
 
-	T update();
+    T update();
 
-	int delete();
+    int delete();
 
 }
