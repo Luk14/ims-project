@@ -86,8 +86,6 @@ public class OrderItemDAO implements Dao<OrderItem>
             {
                 try
                 {
-                    System.out.println("ID: " + (id+1));
-                    System.out.println("IID: " + aLong);
                     statement.executeUpdate("INSERT INTO item_orders (OID, IID) values ('" + (id) + "', '" + aLong + "')");
                 } catch (SQLException e)
                 {
@@ -110,16 +108,45 @@ public class OrderItemDAO implements Dao<OrderItem>
     {
         try (Connection connection = DBUtils.getInstance().getConnection();
              Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery("SELECT * FROM orders where OID = " + id);)
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM orders where OID = " + id);
+             ResultSet resultSet1 = statement.executeQuery("SELECT * FROM item_orders WHERE OID = " + id))
         {
+            List<Long> items = new ArrayList<>();
+            while (resultSet1.next())
+            {
+                items.add(resultSet1.getLong("IID"));
+            }
             resultSet.next();
-            return modelFromResultSet(resultSet);
+            OrderItem orderItem = modelFromResultSet(resultSet);
+            orderItem.setIid(items);
+            return orderItem;
         } catch (Exception e)
         {
             LOGGER.debug(e);
             LOGGER.error(e.getMessage());
         }
         return null;
+    }
+
+    public double getOrderPrice(Long id)
+    {
+        try (Connection connection = DBUtils.getInstance().getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet resultSet1 = statement.executeQuery("SELECT * FROM item_orders WHERE OID = " + id))
+        {
+            List<Long> items = new ArrayList<>();
+            while (resultSet1.next())
+            {
+                items.add(resultSet1.getLong("IID"));
+            }
+            ItemDAO itemDAO = new ItemDAO();
+            return items.stream().map(aLong -> itemDAO.readItem(aLong).getPrice()).reduce(Double::sum).get();
+        } catch (Exception e)
+        {
+            LOGGER.debug(e);
+            LOGGER.error(e.getMessage());
+        }
+        return 0;
     }
 
     /**

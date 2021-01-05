@@ -35,7 +35,7 @@ public class OrderItemController implements CrudController<OrderItem>
         List<OrderItem> orderItems = orderItemDAO.readAll();
         for (OrderItem orderItem : orderItems)
         {
-            LOGGER.info(orderItem.toString());
+            LOGGER.info(orderItem.toString() + " Total Price: " + orderItemDAO.getOrderPrice(orderItem.getOid()));
         }
         return orderItems;
     }

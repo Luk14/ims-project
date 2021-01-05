@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d06ddcc-1205-4787-afd3-a057a266555f" name="Default Changelist" comment="Added MySQL test Files.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/controller/OrderItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/dao/OrderItemDAO.java" afterDir="false" />
+    <list default="true" id="5d06ddcc-1205-4787-afd3-a057a266555f" name="Default Changelist" comment="Added MySQL test Added OrderItemController + OrderItemDAO with functionality.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/IMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/IMS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/domain/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/domain/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/ims/persistence/dao/CustomerDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/ims/persistence/dao/CustomerDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sql-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sql-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/sql-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sql-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/sql-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sql-schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/controller/OrderItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/controller/OrderItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/dao/OrderItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/dao/OrderItemDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +49,14 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in ims" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ims" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,10 +110,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Runner" />
+        <item itemvalue="JUnit.All in ims" />
         <item itemvalue="JUnit.CustomerControllerTest" />
         <item itemvalue="JUnit.CustomerControllerTest.testUpdate" />
         <item itemvalue="JUnit.CustomerDAOTest" />
-        <item itemvalue="Application.Runner" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609780617052</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added MySQL test Added OrderItemController + OrderItemDAO with functionality.">
+      <created>1609848675209</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1609848675209</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -224,6 +233,10 @@
     <MESSAGE value="Added ItemController" />
     <MESSAGE value="Updated IMS to support Item Classes" />
     <MESSAGE value="Added MySQL test Files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added MySQL test Files." />
+    <MESSAGE value="Added MySQL test Added OrderItemController + OrderItemDAO with functionality." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added MySQL test Added OrderItemController + OrderItemDAO with functionality." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ims$All_in_ims.ic" NAME="All in ims Coverage Results" MODIFIED="1609857154017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
