@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d06ddcc-1205-4787-afd3-a057a266555f" name="Default Changelist" comment="Added Support to show Pirces and Fixed some minor bugs/issues">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/ims/persistence/dao/ItemDAOTest.java" afterDir="false" />
+    <list default="true" id="5d06ddcc-1205-4787-afd3-a057a266555f" name="Default Changelist" comment="Added Tests for CustomerDAO">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/ims/persistence/dao/OrderItemTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/ims/persistence/dao/CustomerDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/ims/persistence/dao/CustomerDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/sql-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/sql-data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +40,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.All in ims">
+  <component name="RunManager" selected="JUnit.CustomerDAOTest">
     <configuration name="All in ims" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ims" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.ims.persistence.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.ims.persistence.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.ims.persistence.dao.CustomerDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -58,22 +75,6 @@
       <option name="PACKAGE_NAME" value="com.qa.ims.persistence.dao" />
       <option name="MAIN_CLASS_NAME" value="com.qa.ims.persistence.dao.ItemDAOTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ItemDAOTest.testCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ims" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.qa.ims.persistence.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.qa.ims.persistence.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.qa.ims.persistence.dao.ItemDAOTest" />
-      <option name="METHOD_NAME" value="testCreate" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -112,11 +113,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CustomerDAOTest" />
         <item itemvalue="JUnit.All in ims" />
         <item itemvalue="JUnit.ItemDAOTest" />
         <item itemvalue="JUnit.ItemDAOTest.testUpdate" />
         <item itemvalue="JUnit.ItemDAOTest.testDelete" />
-        <item itemvalue="JUnit.ItemDAOTest.testCreate" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609865451428</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added Tests for CustomerDAO">
+      <created>1609866826839</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1609866826839</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -245,9 +253,10 @@
     <MESSAGE value="Added MySQL test Files." />
     <MESSAGE value="Added MySQL test Added OrderItemController + OrderItemDAO with functionality." />
     <MESSAGE value="Added Support to show Pirces and Fixed some minor bugs/issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Support to show Pirces and Fixed some minor bugs/issues" />
+    <MESSAGE value="Added Tests for CustomerDAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Tests for CustomerDAO" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ims$All_in_ims.ic" NAME="All in ims Coverage Results" MODIFIED="1609857154017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/ims$All_in_ims.ic" NAME="All in ims Coverage Results" MODIFIED="1609866744369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
