@@ -32,7 +32,7 @@ public class ItemDAOTest
     @Test
     public void testCreate()
     {
-        final Item item = new Item(1L, "Books", 1.0, 15.50, "Book is for Reading!");
+        final Item item = new Item(2L, "PC", 1.0, 2499.99, "Gaming!");
         assertEquals(item, itemDAO.create(item));
     }
 
@@ -40,17 +40,13 @@ public class ItemDAOTest
     public void testReadAll()
     {
         List<Item> expected = new ArrayList<>();
-        Item item = new Item(1L, "Books", 1.0, 15.50, "Book is for Reading!");
-        expected.add(item);
-        itemDAO.create(item);
+        expected.add(new Item(1L, "Books", 1.0, 15.50, "Book is for Reading!"));
         assertEquals(expected, itemDAO.readAll());
     }
 
     @Test
     public void testReadLatest()
     {
-        Item item = new Item(1L, "Books", 1.0, 15.50, "Book is for Reading!");
-        itemDAO.create(item);
         assertEquals(new Item(1L, "Books", 1.0, 15.50, "Book is for Reading!"), itemDAO.readLatest());
     }
 
@@ -58,17 +54,13 @@ public class ItemDAOTest
     public void testRead()
     {
         final long ID = 1L;
-        Item item = new Item(ID, "Books", 1.0, 15.50, "Book is for Reading!");
-        itemDAO.create(item);
-        assertEquals(item, itemDAO.readItem(ID));
+        assertEquals(new Item(ID, "Books", 1.0, 15.50, "Book is for Reading!"), itemDAO.readItem(ID));
     }
 
     @Test
     public void testUpdate()
     {
-        final Item oldItem = new Item(1L, "Books", 1.0, 15.50, "Book is for Reading!");
         final Item updatedItem = new Item(1L, "Computer", 1.0, 20, "Book is for Reading!");
-        itemDAO.create(oldItem);
         assertEquals(updatedItem, itemDAO.update(updatedItem));
 
     }
@@ -76,8 +68,6 @@ public class ItemDAOTest
     @Test
     public void testDelete()
     {
-        final Item item = new Item(1L, "Computer", 1.0, 20, "Book is for Reading!");
-        itemDAO.create(item);
         assertEquals(1, itemDAO.delete(1));
     }
 
