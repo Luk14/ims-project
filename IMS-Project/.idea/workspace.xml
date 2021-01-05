@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d06ddcc-1205-4787-afd3-a057a266555f" name="Default Changelist" comment="Updated IMS to support Item Classes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/domain/Order.java" afterDir="false" />
+    <list default="true" id="5d06ddcc-1205-4787-afd3-a057a266555f" name="Default Changelist" comment="Added MySQL test Files.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/controller/OrderItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/dao/OrderItemDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/IMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/IMS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/domain/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/domain/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/ims/persistence/dao/CustomerDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/ims/persistence/dao/CustomerDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sql-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sql-data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sql-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sql-data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sql-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sql-schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="feature-item" />
+        <entry key="$PROJECT_DIR$/.." value="feature-sql" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -38,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Runner">
     <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.qa.ims.Runner" />
       <module name="ims" />
@@ -52,9 +59,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CustomerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.ims.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.ims.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.ims.controllers.CustomerControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerControllerTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.ims.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.ims.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.ims.controllers.CustomerControllerTest" />
+      <option name="METHOD_NAME" value="testUpdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.ims.persistence.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.ims.persistence.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.ims.persistence.dao.CustomerDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Runner" />
+        <item itemvalue="JUnit.CustomerControllerTest" />
+        <item itemvalue="JUnit.CustomerControllerTest.testUpdate" />
+        <item itemvalue="JUnit.CustomerDAOTest" />
         <item itemvalue="Application.Runner" />
       </list>
     </recent_temporary>
@@ -131,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609762620322</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added MySQL test Files.">
+      <created>1609780617052</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609780617052</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -160,6 +223,7 @@
     <MESSAGE value="Added ItemDAO Class + Modified Item Class" />
     <MESSAGE value="Added ItemController" />
     <MESSAGE value="Updated IMS to support Item Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated IMS to support Item Classes" />
+    <MESSAGE value="Added MySQL test Files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added MySQL test Files." />
   </component>
 </project>

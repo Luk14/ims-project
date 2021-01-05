@@ -19,7 +19,7 @@ public class CustomerDAOTest
     @BeforeClass
     public static void init()
     {
-        DBUtils.connect("root", "pass");
+        DBUtils.connect("root", "");
     }
 
     @Before
