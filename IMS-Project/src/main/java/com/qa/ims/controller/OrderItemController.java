@@ -6,6 +6,7 @@ import com.qa.ims.utils.Utils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.swing.plaf.InsetsUIResource;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -63,9 +64,8 @@ public class OrderItemController implements CrudController<OrderItem>
             LOGGER.info("Error processing your Order! Returning...");
             return null;
         }
-        OrderItem orderItem = orderItemDAO.create(new OrderItem(cid, idds));
         LOGGER.info("OrderItem created");
-        return orderItem;
+        return orderItemDAO.create(new OrderItem(cid, idds));
     }
 
     /**
@@ -76,6 +76,11 @@ public class OrderItemController implements CrudController<OrderItem>
     {
         LOGGER.info("Please enter the id of the Order you would like to update");
         Long id = utils.getLong();
+        if(orderItemDAO.readOrder(id)==null)
+        {
+            LOGGER.info("The order you have entered, does not exist in the System!");
+            return null;
+        }
         UPDATE_DECISION update_decision = null;
         do
         {
@@ -109,7 +114,8 @@ public class OrderItemController implements CrudController<OrderItem>
             }
             catch (Exception e)
             {
-                LOGGER.info("Invalid Input! Please try again or type EXIT");
+                LOGGER.info("Invalid Input! Returning...");
+                return null;
             }
         }while (update_decision!=UPDATE_DECISION.EXIT);
         LOGGER.info("Order Updated");
