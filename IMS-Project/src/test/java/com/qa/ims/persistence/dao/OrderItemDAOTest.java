@@ -97,16 +97,6 @@ public class OrderItemDAOTest
         assertEquals(orderItem, orderItemDAO.updateItemFromOrder(1L, 1L, 2L));
     }
 
-//    @Test
-//    public void testUpdate()
-//    {
-//        final Item oldItem = new Item(1L, "Books", 1.0, 15.50, "Book is for Reading!");
-//        final Item updatedItem = new Item(1L, "Computer", 1.0, 20, "Book is for Reading!");
-//        itemDAO.create(oldItem);
-//        assertEquals(updatedItem, itemDAO.update(updatedItem));
-//
-//    }
-
     @Test
     public void testDelete()
     {
