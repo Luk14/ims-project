@@ -108,7 +108,6 @@ public class OrderItemDAO implements Dao<OrderItem>
     {
         try (Connection connection = DBUtils.getInstance().getConnection();
              Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery("SELECT * FROM orders where OID = " + id);
              ResultSet resultSet1 = statement.executeQuery("SELECT * FROM item_orders WHERE OID = " + id))
         {
             List<Long> items = new ArrayList<>();
@@ -116,6 +115,7 @@ public class OrderItemDAO implements Dao<OrderItem>
             {
                 items.add(resultSet1.getLong("IID"));
             }
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM orders where OID = " + id);
             resultSet.next();
             OrderItem orderItem = modelFromResultSet(resultSet);
             orderItem.setIid(items);
@@ -162,7 +162,7 @@ public class OrderItemDAO implements Dao<OrderItem>
         try (Connection connection = DBUtils.getInstance().getConnection();
              Statement statement = connection.createStatement();)
         {
-            Arrays.asList(orderItem.getIid()).forEach(aLong ->
+            orderItem.getIid().forEach(aLong ->
             {
                 try
                 {

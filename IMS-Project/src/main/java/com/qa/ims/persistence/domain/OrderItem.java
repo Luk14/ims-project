@@ -22,6 +22,13 @@ public class OrderItem
         this.iid = longs;
     }
 
+    public OrderItem(Long oid, Long cid, List<Long> longs)
+    {
+        this.oid = oid;
+        this.cid = cid;
+        this.iid = longs;
+    }
+
     public OrderItem(Long oid, Long cid, Long... iid)
     {
         this.oid = oid;
