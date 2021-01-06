@@ -89,7 +89,6 @@ public class OrderItemDAO implements Dao<OrderItem>
                     statement.executeUpdate("INSERT INTO item_orders (OID, IID) values ('" + (id) + "', '" + aLong + "')");
                 } catch (SQLException e)
                 {
-                    e.printStackTrace();
                     LOGGER.debug(e);
                     LOGGER.error(e.getMessage());
                 }
@@ -97,7 +96,6 @@ public class OrderItemDAO implements Dao<OrderItem>
             return readLatest();
         } catch (Exception e)
         {
-            e.printStackTrace();
             LOGGER.debug(e);
             LOGGER.error(e.getMessage());
         }

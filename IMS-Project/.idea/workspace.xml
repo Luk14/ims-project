@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d06ddcc-1205-4787-afd3-a057a266555f" name="Default Changelist" comment="Added ItemControllerTest.java">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/ims/controllers/OrderItemControllerTest.java" afterDir="false" />
+    <list default="true" id="5d06ddcc-1205-4787-afd3-a057a266555f" name="Default Changelist" comment="Updated OrderItemController to support Tests, Added OrderItemControllerTest.java.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/ims/IMSTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/controller/OrderItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/controller/OrderItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/IMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/IMS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/dao/OrderItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/dao/OrderItemDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql-schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/sql-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/sql-schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sql-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sql-schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sql-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sql-schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +45,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
   <component name="RunManager" selected="JUnit.All in ims">
+    <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qa.ims.Runner" />
+      <module name="ims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.ims.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in ims" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ims" />
       <option name="PACKAGE_NAME" value="" />
@@ -48,65 +66,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderItemControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IMSTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ims" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qa.ims.controllers.*" />
+          <option name="PATTERN" value="com.qa.ims.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.qa.ims.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.qa.ims.controllers.OrderItemControllerTest" />
+      <option name="PACKAGE_NAME" value="com.qa.ims" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.ims.IMSTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderItemControllerTest.testAddDecision" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IMSTest.testIMSSystemDatabaseFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ims" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qa.ims.controllers.*" />
+          <option name="PATTERN" value="com.qa.ims.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.qa.ims.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.qa.ims.controllers.OrderItemControllerTest" />
-      <option name="METHOD_NAME" value="testAddDecision" />
+      <option name="PACKAGE_NAME" value="com.qa.ims" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.ims.IMSTest" />
+      <option name="METHOD_NAME" value="testIMSSystemDatabaseFail" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderItemControllerTest.testUpdateFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.qa.ims in ims" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ims" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qa.ims.controllers.*" />
+          <option name="PATTERN" value="com.qa.ims.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.qa.ims.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.qa.ims.controllers.OrderItemControllerTest" />
-      <option name="METHOD_NAME" value="testUpdateFail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderItemControllerTest.testUpdateFailInvalidID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ims" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.qa.ims.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.qa.ims.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.qa.ims.controllers.OrderItemControllerTest" />
-      <option name="METHOD_NAME" value="testUpdateFailInvalidID" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.qa.ims" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -114,10 +114,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in ims" />
-        <item itemvalue="JUnit.OrderItemControllerTest" />
-        <item itemvalue="JUnit.OrderItemControllerTest.testUpdateFailInvalidID" />
-        <item itemvalue="JUnit.OrderItemControllerTest.testAddDecision" />
-        <item itemvalue="JUnit.OrderItemControllerTest.testUpdateFail" />
+        <item itemvalue="JUnit.com.qa.ims in ims" />
+        <item itemvalue="Application.Runner" />
+        <item itemvalue="JUnit.IMSTest.testIMSSystemDatabaseFail" />
+        <item itemvalue="JUnit.IMSTest" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609936529341</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Updated OrderItemController to support Tests, Added OrderItemControllerTest.java.">
+      <created>1609944600767</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1609944600767</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -302,15 +309,19 @@
     <MESSAGE value="Updated SQL files with new Data" />
     <MESSAGE value="Added OrderItemDAOTest.java" />
     <MESSAGE value="Added ItemControllerTest.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ItemControllerTest.java" />
+    <MESSAGE value="Updated OrderItemController to support Tests, Added OrderItemControllerTest.java." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated OrderItemController to support Tests, Added OrderItemControllerTest.java." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ims$OrderItemTest.ic" NAME="OrderItemTest Coverage Results" MODIFIED="1609933826138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.qa.ims.persistence.dao.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/ims$All_in_ims.ic" NAME="All in ims Coverage Results" MODIFIED="1609943577984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/ims$OrderItemControllerTest.ic" NAME="OrderItemControllerTest Coverage Results" MODIFIED="1609944211344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/ims$All_in_ims.ic" NAME="All in ims Coverage Results" MODIFIED="1609951686431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/ims$OrderItemControllerTest.ic" NAME="OrderItemControllerTest Coverage Results" MODIFIED="1609944333139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.qa.ims.controllers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ims$IMSTest.ic" NAME="IMSTest Coverage Results" MODIFIED="1609949684648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.qa.ims.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/ims$com_qa_ims_persistence_dao_in_ims.ic" NAME="com.qa.ims.persistence.dao in ims Coverage Results" MODIFIED="1609933881629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.qa.ims.persistence.dao.*</FILTER>

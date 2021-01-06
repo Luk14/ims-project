@@ -15,10 +15,10 @@ public class IMS
 
     public static final Logger LOGGER = LogManager.getLogger();
 
-    private final CustomerController customers;
-    private final ItemController item;
-    private final OrderItemController orderItemController;
-    private final Utils utils;
+    private CustomerController customers;
+    private ItemController item;
+    private OrderItemController orderItemController;
+    private Utils utils;
 
     public IMS()
     {
@@ -31,9 +31,9 @@ public class IMS
         this.orderItemController = new OrderItemController(orderItemDAO, utils);
     }
 
-    public void imsSystem()
+    public CrudController imsSystem()
     {
-        for (int i = 1; i <= 3; i++)
+        for (int i = 1; true; i++)
         {
             LOGGER.info("What is your username");
             String username = utils.getString();
@@ -47,12 +47,13 @@ public class IMS
             }
             if (i == 3)
             {
-                LOGGER.info("Failed to login Several times! Program Terminating");
-                System.exit(-1);
+                LOGGER.info("Failed to Login!");
+                return null;
             }
             LOGGER.info("Failed to login to Database, please try again! " + (3 - i) + " tries remaining!");
         }
         Domain domain = null;
+        CrudController<?> active = null;
         do
         {
             LOGGER.info("Which entity would you like to use?");
@@ -63,7 +64,6 @@ public class IMS
             do
             {
 
-                CrudController<?> active = null;
                 switch (domain)
                 {
                     case CUSTOMER:
@@ -77,7 +77,7 @@ public class IMS
                         break;
                     case STOP:
                         domain = Domain.STOP;
-                        return;
+                        return active;
                     default:
                         break;
                 }
@@ -96,30 +96,28 @@ public class IMS
                     doAction(active, action);
                 }
             } while (!changeDomain);
-        } while (domain != Domain.STOP);
+        } while (true);
     }
 
-    public void doAction(CrudController<?> crudController, Action action)
+    public Action doAction(CrudController<?> crudController, Action action)
     {
         switch (action)
         {
             case CREATE:
                 crudController.create();
-                break;
+                return Action.CREATE;
             case READ:
                 crudController.readAll();
-                break;
+                return Action.READ;
             case UPDATE:
                 crudController.update();
-                break;
+                return Action.UPDATE;
             case DELETE:
                 crudController.delete();
-                break;
+                return Action.DELETE;
             case RETURN:
-                break;
             default:
-                break;
+                return Action.RETURN;
         }
     }
-
 }
