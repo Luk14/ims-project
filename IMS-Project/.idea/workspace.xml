@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d06ddcc-1205-4787-afd3-a057a266555f" name="Default Changelist" comment="Updated IMS to support Item Classes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/domain/Order.java" afterDir="false" />
+    <list default="true" id="5d06ddcc-1205-4787-afd3-a057a266555f" name="Default Changelist" comment="Updated OrderItemController to support Tests, Added OrderItemControllerTest.java.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/domain/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/domain/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/ims/persistence/domain/Item.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="feature-item" />
+        <entry key="$PROJECT_DIR$/.." value="feature-orders" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -38,7 +39,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.OrderItemDAOTest.testCreate">
     <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.qa.ims.Runner" />
       <module name="ims" />
@@ -52,10 +53,65 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in ims" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ims" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderItemDAOTest.testCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.ims.persistence.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.ims.persistence.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.ims.persistence.dao.OrderItemDAOTest" />
+      <option name="METHOD_NAME" value="testCreate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.qa.ims in ims" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.ims.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.ims" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.qa.ims.persistence.dao in ims" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ims" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.ims.persistence.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.ims.persistence.dao" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OrderItemDAOTest.testCreate" />
+        <item itemvalue="JUnit.All in ims" />
+        <item itemvalue="JUnit.com.qa.ims in ims" />
         <item itemvalue="Application.Runner" />
-        <item itemvalue="Application.Runner" />
+        <item itemvalue="JUnit.com.qa.ims.persistence.dao in ims" />
       </list>
     </recent_temporary>
   </component>
@@ -131,7 +187,98 @@
       <option name="project" value="LOCAL" />
       <updated>1609762620322</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added MySQL test Files.">
+      <created>1609780617052</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609780617052</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added MySQL test Added OrderItemController + OrderItemDAO with functionality.">
+      <created>1609848675209</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1609848675209</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added Support to show Pirces and Fixed some minor bugs/issues">
+      <created>1609865451428</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609865451428</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added Tests for CustomerDAO">
+      <created>1609866826839</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1609866826839</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Updated Different Name on sql-data&#10;and updated it on CustomerDAOTest">
+      <created>1609867141133</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609867141133</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Updated ItemDAOTest and sql-data.sql to to allow more accurate tests">
+      <created>1609867513492</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1609867513492</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added OrderItemDAOTest.java test class, updated OrderItem and OrderItemDAO to support further tests.">
+      <created>1609934131532</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1609934131532</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Updated SQL files with new Data">
+      <created>1609934143849</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1609934143849</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added OrderItemDAOTest.java">
+      <created>1609934161524</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1609934161524</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Added ItemControllerTest.java">
+      <created>1609936529341</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1609936529341</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Updated OrderItemController to support Tests, Added OrderItemControllerTest.java.">
+      <created>1609944600767</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1609944600767</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Fixed sql-schema.sql + Added more Tests to achieve 80%+">
+      <created>1609952932371</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1609952932371</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Added more Tests, 90% coverage!">
+      <created>1609953798672</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1609953798672</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -160,6 +307,37 @@
     <MESSAGE value="Added ItemDAO Class + Modified Item Class" />
     <MESSAGE value="Added ItemController" />
     <MESSAGE value="Updated IMS to support Item Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated IMS to support Item Classes" />
+    <MESSAGE value="Added MySQL test Files." />
+    <MESSAGE value="Added MySQL test Added OrderItemController + OrderItemDAO with functionality." />
+    <MESSAGE value="Added Support to show Pirces and Fixed some minor bugs/issues" />
+    <MESSAGE value="Added Tests for CustomerDAO" />
+    <MESSAGE value="Updated Different Name on sql-data&#10;and updated it on CustomerDAOTest" />
+    <MESSAGE value="Updated ItemDAOTest and sql-data.sql to to allow more accurate tests" />
+    <MESSAGE value="Added OrderItemDAOTest.java test class, updated OrderItem and OrderItemDAO to support further tests." />
+    <MESSAGE value="Updated SQL files with new Data" />
+    <MESSAGE value="Added OrderItemDAOTest.java" />
+    <MESSAGE value="Added ItemControllerTest.java" />
+    <MESSAGE value="Updated OrderItemController to support Tests, Added OrderItemControllerTest.java." />
+    <MESSAGE value="Fixed sql-schema.sql + Added more Tests to achieve 80%+" />
+    <MESSAGE value="Added more Tests, 90% coverage!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more Tests, 90% coverage!" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ims$OrderItemTest.ic" NAME="OrderItemTest Coverage Results" MODIFIED="1609933826138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.qa.ims.persistence.dao.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ims$All_in_ims.ic" NAME="All in ims Coverage Results" MODIFIED="1609953256745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/ims$OrderItemControllerTest.ic" NAME="OrderItemControllerTest Coverage Results" MODIFIED="1609944333139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.qa.ims.controllers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ims$IMSTest.ic" NAME="IMSTest Coverage Results" MODIFIED="1609949684648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.qa.ims.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ims$CustomerDAOFailTest.ic" NAME="CustomerDAOFailTest Coverage Results" MODIFIED="1609953157054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.qa.ims.persistence.dao.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ims$com_qa_ims_persistence_dao_in_ims.ic" NAME="com.qa.ims.persistence.dao in ims Coverage Results" MODIFIED="1609953595706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.qa.ims.persistence.dao.*</FILTER>
+    </SUITE>
   </component>
 </project>

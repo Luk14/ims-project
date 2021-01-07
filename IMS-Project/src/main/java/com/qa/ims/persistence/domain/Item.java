@@ -79,7 +79,13 @@ public class Item
         if (this == o) return true;
         if (!(o instanceof Item)) return false;
         Item item = (Item) o;
-        return id == item.id && Double.compare(item.version, version) == 0 && Double.compare(item.price, price) == 0 && name.equals(item.name) && Objects.equals(description, item.description);
+        return Double.compare(item.version, version) == 0 && Double.compare(item.price, price) == 0 && Objects.equals(id, item.id) && Objects.equals(name, item.name) && Objects.equals(description, item.description);
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return Objects.hash(id, name, version, price, description);
     }
 
     @Override

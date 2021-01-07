@@ -1,11 +1,9 @@
 package com.qa.ims;
 
-import com.qa.ims.controller.Action;
-import com.qa.ims.controller.CrudController;
-import com.qa.ims.controller.CustomerController;
-import com.qa.ims.controller.ItemController;
+import com.qa.ims.controller.*;
 import com.qa.ims.persistence.dao.CustomerDAO;
 import com.qa.ims.persistence.dao.ItemDAO;
+import com.qa.ims.persistence.dao.OrderItemDAO;
 import com.qa.ims.persistence.domain.Domain;
 import com.qa.ims.utils.DBUtils;
 import com.qa.ims.utils.Utils;
@@ -17,22 +15,25 @@ public class IMS
 
     public static final Logger LOGGER = LogManager.getLogger();
 
-    private final CustomerController customers;
-    private final ItemController item;
-    private final Utils utils;
+    private CustomerController customers;
+    private ItemController item;
+    private OrderItemController orderItemController;
+    private Utils utils;
 
     public IMS()
     {
         this.utils = new Utils();
         final CustomerDAO custDAO = new CustomerDAO();
         final ItemDAO itemDAO = new ItemDAO();
+        final OrderItemDAO orderItemDAO = new OrderItemDAO();
         this.customers = new CustomerController(custDAO, utils);
         this.item = new ItemController(itemDAO, utils);
+        this.orderItemController = new OrderItemController(orderItemDAO, utils);
     }
 
-    public void imsSystem()
+    public CrudController imsSystem()
     {
-        for (int i = 1; i <= 3; i++)
+        for (int i = 1; true; i++)
         {
             LOGGER.info("What is your username");
             String username = utils.getString();
@@ -46,12 +47,13 @@ public class IMS
             }
             if (i == 3)
             {
-                LOGGER.info("Failed to login Several times! Program Terminating");
-                System.exit(-1);
+                LOGGER.info("Failed to Login!");
+                return null;
             }
             LOGGER.info("Failed to login to Database, please try again! " + (3 - i) + " tries remaining!");
         }
         Domain domain = null;
+        CrudController<?> active = null;
         do
         {
             LOGGER.info("Which entity would you like to use?");
@@ -62,7 +64,6 @@ public class IMS
             do
             {
 
-                CrudController<?> active = null;
                 switch (domain)
                 {
                     case CUSTOMER:
@@ -72,11 +73,11 @@ public class IMS
                         active = this.item;
                         break;
                     case ORDER:
-                        active = null;
+                        active = this.orderItemController;
                         break;
                     case STOP:
                         domain = Domain.STOP;
-                        return;
+                        return active;
                     default:
                         break;
                 }
@@ -95,30 +96,28 @@ public class IMS
                     doAction(active, action);
                 }
             } while (!changeDomain);
-        } while (domain != Domain.STOP);
+        } while (true);
     }
 
-    public void doAction(CrudController<?> crudController, Action action)
+    public Action doAction(CrudController<?> crudController, Action action)
     {
         switch (action)
         {
             case CREATE:
                 crudController.create();
-                break;
+                return Action.CREATE;
             case READ:
                 crudController.readAll();
-                break;
+                return Action.READ;
             case UPDATE:
                 crudController.update();
-                break;
+                return Action.UPDATE;
             case DELETE:
                 crudController.delete();
-                break;
+                return Action.DELETE;
             case RETURN:
-                break;
             default:
-                break;
+                return Action.RETURN;
         }
     }
-
 }

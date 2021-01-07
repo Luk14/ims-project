@@ -1,5 +1,7 @@
 package com.qa.ims.persistence.domain;
 
+import java.util.Objects;
+
 public class Customer
 {
 
@@ -51,43 +53,24 @@ public class Customer
     }
 
     @Override
-    public String toString()
+    public boolean equals(Object o)
     {
-        return "id:" + id + " first name:" + firstName + " surname:" + surname;
+        if (this == o) return true;
+        if (!(o instanceof Customer)) return false;
+        Customer customer = (Customer) o;
+        return Objects.equals(id, customer.id) && Objects.equals(firstName, customer.firstName) && Objects.equals(surname, customer.surname);
     }
 
     @Override
-    public boolean equals(Object obj)
+    public int hashCode()
     {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Customer other = (Customer) obj;
-        if (firstName == null)
-        {
-            if (other.firstName != null)
-                return false;
-        }
-        else if (!firstName.equals(other.firstName))
-            return false;
-        if (id == null)
-        {
-            if (other.id != null)
-                return false;
-        }
-        else if (!id.equals(other.id))
-            return false;
-        if (surname == null)
-        {
-            if (other.surname != null)
-                return false;
-        }
-        else if (!surname.equals(other.surname))
-            return false;
-        return true;
+        return Objects.hash(id, firstName, surname);
+    }
+
+    @Override
+    public String toString()
+    {
+        return "id:" + id + " first name:" + firstName + " surname:" + surname;
     }
 
 }

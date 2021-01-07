@@ -1,6 +1,6 @@
 drop schema ims;
 CREATE SCHEMA IF NOT EXISTS `ims`;
-USE `ims` ;
+USE `ims`;
 CREATE TABLE IF NOT EXISTS `ims`.`customers` (
     `CID` INT(11) NOT NULL AUTO_INCREMENT,
     `first_name` VARCHAR(32) NULL DEFAULT NULL,

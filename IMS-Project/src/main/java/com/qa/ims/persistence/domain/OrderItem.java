@@ -1,18 +1,39 @@
 package com.qa.ims.persistence.domain;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 public class OrderItem
 {
 
     private Long oid, cid;
-    private Long[] iid;
+    private List<Long> iid;
+
+    public OrderItem(Long cid, Long oid)
+    {
+        this.cid = cid;
+        this.oid = oid;
+    }
+
+    public OrderItem(Long cid, List<Long> longs)
+    {
+        this.cid = cid;
+        this.iid = longs;
+    }
+
+    public OrderItem(Long oid, Long cid, List<Long> longs)
+    {
+        this.oid = oid;
+        this.cid = cid;
+        this.iid = longs;
+    }
 
     public OrderItem(Long oid, Long cid, Long... iid)
     {
         this.oid = oid;
         this.cid = cid;
-        this.iid = iid;
+        this.iid = Arrays.asList(iid);
     }
 
     public Long getOid()
@@ -25,12 +46,12 @@ public class OrderItem
         return cid;
     }
 
-    public Long[] getIid()
+    public List<Long> getIid()
     {
         return iid;
     }
 
-    public void setIid(Long[] iid)
+    public void setIid(List<Long> iid)
     {
         this.iid = iid;
     }

@@ -10,8 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
-public class CustomerDAOTest
+public class CustomerDAOFailTest
 {
 
     private final CustomerDAO DAO = new CustomerDAO();
@@ -19,7 +20,7 @@ public class CustomerDAOTest
     @BeforeClass
     public static void init()
     {
-        DBUtils.connect("root", "");
+        DBUtils.connect("root", "wrongPassword");
     }
 
     @Before
@@ -32,41 +33,41 @@ public class CustomerDAOTest
     public void testCreate()
     {
         final Customer created = new Customer(2L, "chris", "perrins");
-        assertEquals(created, DAO.create(created));
+        assertNull(DAO.create(created));
     }
 
     @Test
     public void testReadAll()
     {
         List<Customer> expected = new ArrayList<>();
-        expected.add(new Customer(1L, "sam", "smith"));
         assertEquals(expected, DAO.readAll());
     }
 
     @Test
     public void testReadLatest()
     {
-        assertEquals(new Customer(1L, "sam", "smith"), DAO.readLatest());
+        assertNull(DAO.readLatest());
     }
 
     @Test
     public void testRead()
     {
         final long ID = 1L;
-        assertEquals(new Customer(ID, "sam", "smith"), DAO.readCustomer(ID));
+        assertNull(DAO.readCustomer(ID));
     }
 
     @Test
     public void testUpdate()
     {
         final Customer updated = new Customer(1L, "chris", "perrins");
-        assertEquals(updated, DAO.update(updated));
+        assertNull(DAO.update(updated));
 
     }
 
     @Test
     public void testDelete()
     {
-        assertEquals(1, DAO.delete(1));
+        assertEquals(0, DAO.delete(1));
     }
+
 }
