@@ -1,6 +1,7 @@
 package com.qa.ims.persistence.dao;
 
 import com.qa.ims.persistence.domain.Customer;
+import com.qa.ims.persistence.domain.Item;
 import com.qa.ims.utils.DBUtils;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -11,10 +12,10 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class CustomerDAOTest
+public class ItemDAOTest
 {
 
-    private final CustomerDAO DAO = new CustomerDAO();
+    private final ItemDAO itemDAO = new ItemDAO();
 
     @BeforeClass
     public static void init()
@@ -31,42 +32,44 @@ public class CustomerDAOTest
     @Test
     public void testCreate()
     {
-        final Customer created = new Customer(2L, "chris", "perrins");
-        assertEquals(created, DAO.create(created));
+        final Item item = new Item(2L, "PC", 1.0, 2499.99, "Gaming!");
+        assertEquals(item, itemDAO.create(item));
     }
 
     @Test
     public void testReadAll()
     {
-        List<Customer> expected = new ArrayList<>();
-        expected.add(new Customer(1L, "sam", "smith"));
-        assertEquals(expected, DAO.readAll());
+        List<Item> expected = new ArrayList<>();
+        expected.add(new Item(1L, "Books", 1.0, 15.50, "Book is for Reading!"));
+        assertEquals(expected, itemDAO.readAll());
     }
 
     @Test
     public void testReadLatest()
     {
-        assertEquals(new Customer(1L, "sam", "smith"), DAO.readLatest());
+        assertEquals(new Item(1L, "Books", 1.0, 15.50, "Book is for Reading!"), itemDAO.readLatest());
     }
 
     @Test
     public void testRead()
     {
         final long ID = 1L;
-        assertEquals(new Customer(ID, "sam", "smith"), DAO.readCustomer(ID));
+        assertEquals(new Item(ID, "Books", 1.0, 15.50, "Book is for Reading!"), itemDAO.readItem(ID));
     }
 
     @Test
     public void testUpdate()
     {
-        final Customer updated = new Customer(1L, "chris", "perrins");
-        assertEquals(updated, DAO.update(updated));
+        final Item updatedItem = new Item(1L, "Computer", 1.0, 20, "Book is for Reading!");
+        assertEquals(updatedItem, itemDAO.update(updatedItem));
 
     }
 
     @Test
     public void testDelete()
     {
-        assertEquals(1, DAO.delete(1));
+        assertEquals(1, itemDAO.delete(1));
     }
+
+
 }

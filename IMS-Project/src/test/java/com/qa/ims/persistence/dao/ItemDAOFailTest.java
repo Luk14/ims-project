@@ -1,6 +1,6 @@
 package com.qa.ims.persistence.dao;
 
-import com.qa.ims.persistence.domain.Customer;
+import com.qa.ims.persistence.domain.Item;
 import com.qa.ims.utils.DBUtils;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -10,16 +10,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
-public class CustomerDAOTest
+public class ItemDAOFailTest
 {
 
-    private final CustomerDAO DAO = new CustomerDAO();
+    private final ItemDAO DAO = new ItemDAO();
 
     @BeforeClass
     public static void init()
     {
-        DBUtils.connect("root", "");
+        DBUtils.connect("root", "wrongPassword");
     }
 
     @Before
@@ -31,42 +32,43 @@ public class CustomerDAOTest
     @Test
     public void testCreate()
     {
-        final Customer created = new Customer(2L, "chris", "perrins");
-        assertEquals(created, DAO.create(created));
+        final Item item = new Item(2L, "PC", 1.0, 2499.99, "Gaming!");
+        assertNull(DAO.create(item));
     }
 
     @Test
     public void testReadAll()
     {
-        List<Customer> expected = new ArrayList<>();
-        expected.add(new Customer(1L, "sam", "smith"));
+        List<Item> expected = new ArrayList<>();
         assertEquals(expected, DAO.readAll());
     }
 
     @Test
     public void testReadLatest()
     {
-        assertEquals(new Customer(1L, "sam", "smith"), DAO.readLatest());
+        assertNull(DAO.readLatest());
     }
 
     @Test
     public void testRead()
     {
         final long ID = 1L;
-        assertEquals(new Customer(ID, "sam", "smith"), DAO.readCustomer(ID));
+        assertNull(DAO.readItem(ID));
     }
 
     @Test
     public void testUpdate()
     {
-        final Customer updated = new Customer(1L, "chris", "perrins");
-        assertEquals(updated, DAO.update(updated));
+        final Item updatedItem = new Item(1L, "Computer", 1.0, 20, "Book is for Reading!");
+        assertNull(DAO.update(updatedItem));
 
     }
 
     @Test
     public void testDelete()
     {
-        assertEquals(1, DAO.delete(1));
+        assertEquals(0, DAO.delete(1));
     }
+
+
 }

@@ -1,52 +1,58 @@
 package com.qa.ims.utils;
 
-import java.util.Scanner;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Utils {
-	private static Logger LOGGER = LogManager.getLogger();
+import java.util.Scanner;
 
-	private final Scanner scanner;
+public class Utils
+{
+    private static Logger LOGGER = LogManager.getLogger();
 
-	public Utils(Scanner scanner) {
-		super();
-		this.scanner = scanner;
-	}
+    private final Scanner scanner;
 
-	public Utils() {
-		scanner = new Scanner(System.in);
-	}
+    public Utils()
+    {
+        scanner = new Scanner(System.in);
+    }
 
-	public Long getLong() {
-		String input = getString();
-		Long longInput = null;
-		do {
-			try {
-				longInput = Long.parseLong(input);
-			} catch (NumberFormatException nfe) {
-				LOGGER.info("Error - Please enter a number");
-			}
-		} while (longInput == null);
-		return longInput;
-	}
+    public Long getLong()
+    {
+        String input = getString();
+        Long longInput = null;
+        do
+        {
+            try
+            {
+                longInput = Long.parseLong(input);
+            } catch (NumberFormatException nfe)
+            {
+                LOGGER.info("Error - Please enter a number");
+            }
+        } while (longInput == null);
+        return longInput;
+    }
 
-	public String getString() {
-		return scanner.nextLine();
-	}
+    public String getString()
+    {
+        return scanner.nextLine();
+    }
 
-	public Double getDouble() {
-		String input = getString();
-		Double doubleInput = null;
-		do {
-			try {
-				doubleInput = Double.parseDouble(input);
-			} catch (NumberFormatException nfe) {
-				LOGGER.info("Error - Please enter a number");
-			}
-		} while (doubleInput == null);
-		return doubleInput;
-	}
+    public Double getDouble()
+    {
+        String input = getString();
+        Double doubleInput = null;
+        do
+        {
+            try
+            {
+                doubleInput = Double.parseDouble(input);
+            } catch (NumberFormatException nfe)
+            {
+                LOGGER.info("Error - Please enter a number");
+            }
+        } while (doubleInput == null);
+        return doubleInput;
+    }
 
 }

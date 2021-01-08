@@ -1,6 +1,6 @@
 package com.qa.ims.persistence.dao;
 
-import com.qa.ims.persistence.domain.Customer;
+import com.qa.ims.persistence.domain.Item;
 import com.qa.ims.utils.DBUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,38 +12,40 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomerDAO implements Dao<Customer>
+public class ItemDAO implements Dao<Item>
 {
 
     public static final Logger LOGGER = LogManager.getLogger();
 
     @Override
-    public Customer modelFromResultSet(ResultSet resultSet) throws SQLException
+    public Item modelFromResultSet(ResultSet resultSet) throws SQLException
     {
-        Long id = resultSet.getLong("CID");
-        String firstName = resultSet.getString("first_name");
-        String surname = resultSet.getString("last_name");
-        return new Customer(id, firstName, surname);
+        Long id = resultSet.getLong("IID");
+        String name = resultSet.getString("name");
+        double ver = resultSet.getDouble("version");
+        double price = resultSet.getDouble("price");
+        String description = resultSet.getString("description");
+        return new Item(id, name, ver, price, description);
     }
 
     /**
-     * Reads all customers from the database
+     * Reads all item from the database
      *
-     * @return A list of customers
+     * @return A list of item
      */
     @Override
-    public List<Customer> readAll()
+    public List<Item> readAll()
     {
         try (Connection connection = DBUtils.getInstance().getConnection();
              Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery("select * from customers");)
+             ResultSet resultSet = statement.executeQuery("select * from item");)
         {
-            List<Customer> customers = new ArrayList<>();
+            List<Item> item = new ArrayList<>();
             while (resultSet.next())
             {
-                customers.add(modelFromResultSet(resultSet));
+                item.add(modelFromResultSet(resultSet));
             }
-            return customers;
+            return item;
         } catch (SQLException e)
         {
             LOGGER.debug(e);
@@ -52,11 +54,11 @@ public class CustomerDAO implements Dao<Customer>
         return new ArrayList<>();
     }
 
-    public Customer readLatest()
+    public Item readLatest()
     {
         try (Connection connection = DBUtils.getInstance().getConnection();
              Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery("SELECT * FROM customers ORDER BY CID DESC LIMIT 1");)
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM item ORDER BY IID DESC LIMIT 1");)
         {
             resultSet.next();
             return modelFromResultSet(resultSet);
@@ -69,18 +71,18 @@ public class CustomerDAO implements Dao<Customer>
     }
 
     /**
-     * Creates a customer in the database
+     * Creates a item in the database
      *
-     * @param customer - takes in a customer object. id will be ignored
+     * @param item - takes in a item object. id will be ignored
      */
     @Override
-    public Customer create(Customer customer)
+    public Item create(Item item)
     {
         try (Connection connection = DBUtils.getInstance().getConnection();
              Statement statement = connection.createStatement();)
         {
-            statement.executeUpdate("INSERT INTO customers(first_name, last_name) values('" + customer.getFirstName()
-                    + "','" + customer.getSurname() + "')");
+            statement.executeUpdate("INSERT INTO item(name, version, price, description) values('" + item.getName()
+                    + "','" + item.getVersion() + "','" + item.getPrice() + "','" + item.getDescription() + "')");
             return readLatest();
         } catch (Exception e)
         {
@@ -90,11 +92,11 @@ public class CustomerDAO implements Dao<Customer>
         return null;
     }
 
-    public Customer readCustomer(Long id)
+    public Item readItem(Long id)
     {
         try (Connection connection = DBUtils.getInstance().getConnection();
              Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery("SELECT * FROM customers where CID = " + id);)
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM item where IID = " + id);)
         {
             resultSet.next();
             return modelFromResultSet(resultSet);
@@ -107,21 +109,21 @@ public class CustomerDAO implements Dao<Customer>
     }
 
     /**
-     * Updates a customer in the database
+     * Updates a item in the database
      *
-     * @param customer - takes in a customer object, the id field will be used to
-     *                 update that customer in the database
+     * @param item - takes in a item object, the id field will be used to
+     *             update that item in the database
      * @return
      */
     @Override
-    public Customer update(Customer customer)
+    public Item update(Item item)
     {
         try (Connection connection = DBUtils.getInstance().getConnection();
              Statement statement = connection.createStatement();)
         {
-            statement.executeUpdate("update customers set first_name ='" + customer.getFirstName() + "', last_name ='"
-                    + customer.getSurname() + "' where CID =" + customer.getId());
-            return readCustomer(customer.getId());
+            statement.executeUpdate("update item set name ='" + item.getName() + "', version ='"
+                    + item.getVersion() + "', price ='" + item.getPrice() + "', description ='" + item.getDescription() + "' where IID =" + item.getId());
+            return readItem(item.getId());
         } catch (Exception e)
         {
             LOGGER.debug(e);
@@ -131,9 +133,9 @@ public class CustomerDAO implements Dao<Customer>
     }
 
     /**
-     * Deletes a customer in the database
+     * Deletes a item in the database
      *
-     * @param id - id of the customer
+     * @param id - id of the item
      */
     @Override
     public int delete(long id)
@@ -141,7 +143,7 @@ public class CustomerDAO implements Dao<Customer>
         try (Connection connection = DBUtils.getInstance().getConnection();
              Statement statement = connection.createStatement();)
         {
-            return statement.executeUpdate("delete from customers where CID = " + id);
+            return statement.executeUpdate("delete from item where IID = " + id);
         } catch (Exception e)
         {
             LOGGER.debug(e);
@@ -149,5 +151,4 @@ public class CustomerDAO implements Dao<Customer>
         }
         return 0;
     }
-
 }
