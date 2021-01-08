@@ -49,8 +49,8 @@
 
 ### Built With
 
-* []()Maven
-* []()Java
+* [Maven](http://maven.apache.org/)
+* [Java](https://www.java.com/en/)
 
 
 
@@ -65,15 +65,13 @@ To get a local copy up and running follow these simple steps.
    ```sh
    git clone https://github.com/Luk14/ims-project.git
    ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
    
-3. Compile the jar File
+2. Compile the jar* File
    ```sh
    mvn clean package
    ```
+   
+* If you do not have Java installed, please follow the instructions to install it [Java](https://docs.oracle.com/en/java/javase/11/install/installation-jdk-microsoft-windows-platforms.html#GUID-0DB9580B-1ACA-4C13-8A83-9780BEDF30BB)
    
 <!-- USAGE -->
 ### Usage
@@ -89,7 +87,7 @@ To get a local copy up and running follow these simple steps.
 
 1. Run the tests
    ```sh
-   mvn tests
+   mvn test
    ```
    
 2. A screenshot of the Covarage is located [here](https://github.com/Luk14/ims-project/tree/main/Documentations/Screenshots)
@@ -130,8 +128,8 @@ Project Link: [https://github.com/Luk14/ims-project](https://github.com/Luk14/im
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()QA
-
+* [Christopher Perrins](https://github.com/christophperrins)
+* [Harry J](https://github.com/JHarry444)
 
 
 
